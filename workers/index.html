@@ -6,6 +6,7 @@
 </head>
 <body>
 	<script type="text/javascript">
+	//and now lets try if we have to resolve the conflict again
 		var worker = new Worker('some_taks.js');
 		worker.onmessage = function (event) {
 			console.log('Worker said ' + event.data);
