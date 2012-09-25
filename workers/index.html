@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var worker = new Worker('some_taks.js');
+		worker.onmessage = function (event) {
+			console.log('Worker said ' + event.data);
+		}
+		//worker.postMessage('Ali');
+	</script>
+</body>
+</html>
