@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+	input {display: block; margin-bottom: 20px;}
+	</style>
+</head>
+<body>
+	<input type="button" id="button1" value="Button1" />
+	<input type="button" id="button2" value="Button2" />
+	<script>
+	(function () {
+		var button1val = false,
+			button2val = false,
+			button1 = function () {
+				console.log('button1 clicked');
+				button1val = true;
+				if (button2val) {
+					bothClicked();
+				}
+			},
+			button2 = function () {
+				console.log('button2 clicked');
+				button2val = true;
+				if (button1val) {
+					bothClicked();
+				}				
+			},
+			bothClicked = function () {
+				console.log('both clicked');
+				button1val = false;
+				button2val = false;
+			};
+		document.getElementById('button1').addEventListener('click', button1, false);
+		document.getElementById('button2').addEventListener('click', button2, false);	
+	})();
+	</script>
+</body>
+</html>
+document.addEventListener('pageready', function () {
+	window.setTimeout(function () {
+		//check if the lead article image has loaded and then initiate the scroll
+		var $activeCell = $('.cell').filter('.visible'),
+			initScrollers = false,
+			$leadImage = $activeCell.find('figure').find('img');
+			$leadImage.on('load', function () {
+				initScrollers = true;
+				NI.section.scrollers.enable();
+			});
+			if ($leadImage.height() > 0 && initScrollers === false) {
+				NI.section.scrollers.enable();			
+			}		
+	}, 0);
+}, false);
