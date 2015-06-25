@@ -4,7 +4,7 @@
 
 ###Content:
 
- * [**Authentication, Registration and Login**](Authentication) - calls and model structure related to user authentication
+ * [**Authentication, Registration and Login**](#authentication) - calls and model structure related to user authentication
   * [Create user account with email and password](Create-user-account-with-email-and-password)
  * [**User**](user) - calls and model structure related updating a user
  * [**Search**](search) - calls and model structure related to returning a list of trips, based on criteria
@@ -13,7 +13,7 @@
  * [**Booking**](bookings) - calls and model structure related to requesting/accepting/declining managing bookings for a trip
  
  
-#Authentication
+#<a name="authentication"></a>Authentication
 
 ##Create user account with email and password
 
