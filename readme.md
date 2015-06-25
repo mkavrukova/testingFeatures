@@ -5,7 +5,8 @@
 ###Content:
 
  * [**Authentication, Registration and Login**](#authentication) - calls and model structure related to user authentication
-  * [Create user account with email and password](Create-user-account-with-email-and-password)
+  * [Create user account with email and password](#create-user-with-email-and-password)
+  * [Login a user with email and password](#login-user-with-email-and-password)
  * [**User**](user) - calls and model structure related updating a user
  * [**Search**](search) - calls and model structure related to returning a list of trips, based on criteria
  * [**Trip**](trip) - calls and model structure related to creating, updating and managing a trip
@@ -15,7 +16,7 @@
  
 #<a name="authentication"></a>Authentication
 
-##Create user account with email and password
+##<a name="create-user-with-email-and-password"></a>Create user account with email and password
 
 * **URL**
 
@@ -88,4 +89,63 @@
 	  }
 	}
     ```
+    
+##<a name="login-user-with-email-and-password">Login a user with email and password
+
+* **URL**
+
+  `POST` 
+  
+  /login/
+  
+* **Data Json Payload**
+		
+```json
+{
+  "email": "",
+  "password": ""
+}
+```
+
+
+|Name|Type|Required|Description|
+|----|----|--------|-----------|
+|`email`|*string*|true| User's email |
+|`password`|*string*|true| User's password |
+
+* **Success Response:**
+
+  * **Code:** 200
+  * **Headers:**
+  
+|Name|Description|
+|----|-----------|
+|`Authorization`|Authorization token for secure communication between a client and the REST API|
+  
+  * **Content:**
+  ```json
+	{
+	  "id":1,
+	  "firstname": "",
+	  "lastname": "",
+	  "email": "",
+	  "imageUrl": ""
+	}
+  ```
+ 
+* **Error Response:**
+	
+	* **Code:** 400 BAD REQUEST
+    	* **Content:** 
+	    ```json
+	    {
+		  "error": "Invalid parameters",
+		  "details": {
+			  "email": "Invalid email"
+		  }
+		}
+	    ```
+
+
+
  
