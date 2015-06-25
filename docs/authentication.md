@@ -37,7 +37,7 @@
   |`Authorization`|Authorization token for secure communication between a client and the REST API|
  	  
    * **Content:**
-  ```json
+  		```json
 	{
 	  "id":1,
 	  "firstname": "",
@@ -65,7 +65,7 @@
 	
 	* **Code:** 400 BAD REQUEST
     * **Content:** 
-    ```json
+    	```json
     {
 	  "error": "Invalid parameters",
 	  "details": {
