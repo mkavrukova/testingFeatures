@@ -10,7 +10,7 @@
   
 * **Data Json Payload**
 
-```json
+	```json
 {
   "firstname": "",
   "lastname": "",
@@ -19,7 +19,7 @@
 }
 ```
 
-|Name|Type|Required|Description|
+	|Name|Type|Required|Description|
 |----|----|--------|-----------|
 |`email`|*string*|true| User's email |
 |`password`|*string*|true| User's password |
