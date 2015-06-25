@@ -129,3 +129,62 @@
 		  }
 		}
 	    ```
+	    
+##<a name="login-user-with-facebook"></a>Login a user with Facebook [TBD]
+
+* **URL**
+
+  `POST` 
+  
+  /login/facebook/
+  
+* **Data Json Payload**
+		
+```json
+{
+  "facebookUserId": "",
+  "facebookUserToken": "",
+  "facebookUserTokenType": ""
+}
+```
+
+|Name|Type|Required|Description|
+|----|----|--------|-----------|
+|`facebookUserId`|*string*|true| User's FB id |
+|`facebookUserToken`|*string*|true| User's FB access token |
+|`facebookUserTokenType`|*string*|true| User's FB access token type "short" |
+
+* **Success Response:**
+
+  * **Code:** 201
+  * **Headers:**
+  
+|Name|Description|
+|----|-----------|
+|`Authorization`|Authorization token for secure communication between a client and the REST API|
+
+  * **Content:**
+  
+  ```json
+	{
+	  "id":1,
+	  "firstname": "",
+	  "lastname": "",
+	  "email": "",
+	  "imageUrl": ""
+	}
+  ```
+ 
+* **Error Response:**
+	
+    * **Code:** 400 BAD REQUEST
+    * **Content:** 
+    
+    ```json
+    {
+	  "error": "Invalid parameters",
+	  "details": {
+		  "token": "Invalid token"
+	  }
+	}
+	```	   
