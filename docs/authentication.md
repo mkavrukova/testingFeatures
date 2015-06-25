@@ -12,10 +12,10 @@
 
 	```json
 {
-  "firstname": "",
-  "lastname": "",
-  "email": "",
-  "password" : ""
+	  "firstname": "",
+	  "lastname": "",
+	  "email": "",
+	  "password" : ""
 }
 ```
 
@@ -39,25 +39,25 @@
    * **Content:**
   		```json
 	{
-	  "id":1,
-	  "firstname": "",
-	  "lastname": "",
-	  "email": "",
-	  "alias": "",
-	  "imageUrl": "",
-	  "phone": null,
-	  "experience": "",
-      "location": {
-        "name": "",
-        "lat": 0,
-        "lon": 0
-      },
-	  "emailVerified": false,
-	  "phoneVerified": false,
-	  "rate": 0,
-	  "rateCount": 0,
-	  "birthYear": 1984,
-	  "createdDate": "2015-06-24T10:10:12.571Z"
+		  "id":1,
+		  "firstname": "",
+		  "lastname": "",
+		  "email": "",
+		  "alias": "",
+		  "imageUrl": "",
+		  "phone": null,
+		  "experience": "",
+		      "location": {
+		        "name": "",
+		        "lat": 0,
+		        "lon": 0
+		      },
+		  "emailVerified": false,
+		  "phoneVerified": false,
+		  "rate": 0,
+		  "rateCount": 0,
+		  "birthYear": 1984,
+		  "createdDate": "2015-06-24T10:10:12.571Z"
 	}
   ```
  
@@ -65,12 +65,13 @@
 	
 	* **Code:** 400 BAD REQUEST
     * **Content:** 
+    
     	```json
-    {
-	  "error": "Invalid parameters",
-	  "details": {
-		  "email": "Invalid email"
-	  }
+    	{
+		  "error": "Invalid parameters",
+		  "details": {
+			  "email": "Invalid email"
+		  }
 	}
     ```
     
